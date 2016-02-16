@@ -1,0 +1,9 @@
+%% -*- erlang -*-
+{application, http_to_mqtt,
+ [{description, "http_to_mqtt"},
+  {vsn, "0.1"},
+  {modules, []},
+  {registered, []},
+  {mod, {'http_to_mqtt_app', []}},
+  {env, []},
+  {applications, [kernel, stdlib, crypto]}]}.
