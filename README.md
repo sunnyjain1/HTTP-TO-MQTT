@@ -1,6 +1,6 @@
 ## http_to_mqtt
 
-Plugin to convert Mqtt request to Http request written in Erlang.
+Server which convert HTTP request to MQTT request written in Erlang.
 
 
 ## Prerequisites
