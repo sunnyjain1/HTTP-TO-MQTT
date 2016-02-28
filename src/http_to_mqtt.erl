@@ -21,6 +21,7 @@ ensure_started(App) ->
 start() ->
     http_to_mqtt_deps:ensure(),
     ensure_started(crypto),
+    ensure_started(inets),
     application:start(http_to_mqtt).
 
 

@@ -6,6 +6,8 @@
 -module(http_to_mqtt_web).
 -author("Mochi Media <dev@mochimedia.com>").
 -import(proplists,[get_value/2,get_value/3]).
+%-import(vmq_reg,[publish/1,publish/2]).
+%-include("vmq_server.hrl").
 -export([start/1, stop/0, loop/2]).
 
 %% External API
@@ -36,12 +38,14 @@ loop(Req, DocRoot) ->
                 case Path of
                     _ ->
 						Data = mochiweb_request:parse_post(Req),
-						{RegisterFun, PublishFun, SubscribeFun} = vmq_reg:direct_plugin_exports(greeting),
+						{RegisterFun, PublishFun, SubscribeFun} = vmq_reg:direct_plugin_exports(http_to_mqtt),
 						Topic    = get_value("topic", Data),
 						List_of_topics = string:tokens(Topic, "/"),
 						Lot = lists:map(fun(X) -> list_to_binary(X) end, List_of_topics),
 						Payload  = list_to_binary(get_value("message", Data)),
 						error_logger:info_msg("Topics: ~p~nPayload: ~p",[Lot, Payload]),
+			%			Msg = #vmq_msg{routing_key=Lot,payload=Payload,qos=1},
+			%			ok = publish(Msg),
 						PublishFun(Lot,Payload),
 						Req:ok({"text/html", [], "<p>Thank you. <p>"})
 
