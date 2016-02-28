@@ -24,7 +24,7 @@ For Installing Git you can look [here](https://git-scm.com/book/en/v2/Getting-St
     
 2) Go in the clone directory using command
     
-    $ cd mqtt_to_http
+    $ cd http_to_mqtt
 
 3) Compile the plugin using commands
     
@@ -33,7 +33,7 @@ For Installing Git you can look [here](https://git-scm.com/book/en/v2/Getting-St
 
 4) Start the server using command
     
-    $ vernemq start
+    $ vernemq start ("vernemq restart" if already started)
     
 5) Enable the plugin using command(Before eenable the plugin you should start inets application)
     
