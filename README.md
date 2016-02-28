@@ -25,17 +25,19 @@ For Installing Git you can look [here](https://git-scm.com/book/en/v2/Getting-St
 2) Go in the clone directory using command
     
     $ cd mqtt_to_http
+
+3) Compile the plugin using commands
     
-3) Compile the plugin using command
-    
+    $ make
     $ ./rebar compile
 
 4) Start the server using command
     
     $ vernemq start
     
-5) Enable the plugin using command
+5) Enable the plugin using command(Before eenable the plugin you should start inets application)
     
+    $ vmq-admin plugin enable -n inets -p <Path to inets> (In my case it is usr/local/lib/erlang/lib/inets-5.10.6)
     $ vmq-admin plugin enable -n http_to_mqtt -p <Path to the Cloned Dir>
     
 6) You can check the plugin starts working by using the command
