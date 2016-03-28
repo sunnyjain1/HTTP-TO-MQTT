@@ -1,12 +1,8 @@
-%% @author Mochi Media <dev@mochimedia.com>
-%% @copyright 2010 Mochi Media <dev@mochimedia.com>
-
 %% @doc Ensure that the relatively-installed dependencies are on the code
 %%      loading path, and locate resources relative
 %%      to this application's path.
 
 -module(http_to_mqtt_deps).
--author("Mochi Media <dev@mochimedia.com>").
 
 -export([ensure/0, ensure/1]).
 -export([get_base_dir/0, get_base_dir/1]).

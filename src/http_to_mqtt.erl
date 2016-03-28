@@ -1,10 +1,6 @@
-%% @author Mochi Media <dev@mochimedia.com>
-%% @copyright 2010 Mochi Media <dev@mochimedia.com>
-
 %% @doc http_to_mqtt.
 
 -module(http_to_mqtt).
--author("Mochi Media <dev@mochimedia.com>").
 -export([start/0, stop/0]).
 
 ensure_started(App) ->

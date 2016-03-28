@@ -1,12 +1,7 @@
-%% @author Mochi Media <dev@mochimedia.com>
-%% @copyright 2010 Mochi Media <dev@mochimedia.com>
-
 %% @doc Web server for http_to_mqtt.
 
 -module(http_to_mqtt_web).
--author("Mochi Media <dev@mochimedia.com>").
 -import(proplists,[get_value/2,get_value/3]).
-%-include("include/vmq_server.hrl").
 -export([start/1, stop/0, loop/2]).
 
 %% External API
@@ -67,17 +62,3 @@ loop(Req, DocRoot) ->
 
 get_option(Option, Options) ->
     {proplists:get_value(Option, Options), proplists:delete(Option, Options)}.
-
-%%
-%% Tests
-%%
--ifdef(TEST).
--include_lib("eunit/include/eunit.hrl").
-
-you_should_write_a_test() ->
-    ?assertEqual(
-       "No, but I will!",
-       "Have you written any tests?"),
-    ok.
-
--endif.

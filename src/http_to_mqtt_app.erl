@@ -1,8 +1,3 @@
-%% @author Mochi Media <dev@mochimedia.com>
-%% @copyright http_to_mqtt Mochi Media <dev@mochimedia.com>
-
-%% @doc Callbacks for the http_to_mqtt application.
-
 -module(http_to_mqtt_app).
 -author("Mochi Media <dev@mochimedia.com>").
 

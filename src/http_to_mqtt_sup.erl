@@ -1,11 +1,6 @@
-%% @author Mochi Media <dev@mochimedia.com>
-%% @copyright 2010 Mochi Media <dev@mochimedia.com>
-
 %% @doc Supervisor for the http_to_mqtt application.
 
 -module(http_to_mqtt_sup).
--author("Mochi Media <dev@mochimedia.com>").
-
 -behaviour(supervisor).
 
 %% External exports
