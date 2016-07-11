@@ -1,4 +1,4 @@
-## http_to_mqtt
+## HTTP TO MQTT
 
 Server which convert HTTP request to MQTT request written in Erlang.
 
